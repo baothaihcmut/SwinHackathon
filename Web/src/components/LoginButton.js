@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './components.css';
+import {GoogleOutlined } from '@ant-design/icons';
 const LoginButton = () => {
   const [user, setUser] = useState(null);
   const [accessToken, setAccessToken] = useState('');
@@ -48,7 +49,7 @@ const LoginButton = () => {
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <button onClick={handleLogin} className='login-popup'>Login with Google</button>
+        <button onClick={handleLogin} className='login-popup'>Login with <GoogleOutlined/> </button>
       )}
     </div>
   );

@@ -4,6 +4,7 @@ import BreadCrumb from './components/BreadCrumb';
 import UserSwitch from './components/UserSwitch';
 import CameraButton from './components/CameraButton.js';
 import LoginButton from './components/LoginButton.js';
+import Response from './components/Response.js';
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
         <CameraButton></CameraButton>
       </div>
       </div>
-      <div className="response">REPONSE</div>
+      <div className="res">
+        <Response></Response>
+      </div>
+
     </div>
 
   );

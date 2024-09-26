@@ -96,7 +96,7 @@ body {
     font-size: smaller;
 }
 .camera-submit{
-    margin-left: 85px;
+    margin-left: 70px;
     position: absolute;
     top :50px;
 }
@@ -105,4 +105,23 @@ body {
     font-family: 'Poppins', sans-serif;
     color: white;
     font-style: italic;
+}
+.res{
+    position: absolute;
+    display: flex;
+    top: 100px;
+    text-align:start;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    background:transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    color: rgb(178, 238, 59);
+    font-weight: 500;
+    z-index: 4;
+    background: linear-gradient(40deg,#2c712e14,#a99a1917);
+    visibility: hidden;
 }
