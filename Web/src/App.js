@@ -3,6 +3,7 @@ import './project.css';
 import BreadCrumb from './components/BreadCrumb';
 import UserSwitch from './components/UserSwitch';
 import CameraButton from './components/CameraButton.js';
+import LoginButton from './components/LoginButton.js';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <h2 className="name">Binariers</h2>
           <div className='bar'>        
           <BreadCrumb></BreadCrumb>
-          <button className="buttonPopup">Login</button>
+          <LoginButton></LoginButton>
           </div>
       </header>
       <div className="switch">
