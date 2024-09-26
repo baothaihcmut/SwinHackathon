@@ -1,0 +1,25 @@
+.camera{
+    width:200px;
+    height: 50px;
+    position: absolute;
+    background:transparent;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition:.4s;
+    z-index: 10;  
+    transform: .1;
+}
+.camera-layer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.camera:hover{
+    color: white;
+    border-color: white;
+}
