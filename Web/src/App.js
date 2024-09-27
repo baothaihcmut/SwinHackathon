@@ -7,10 +7,13 @@ import LoginButton from './components/LoginButton.js';
 import Response from './components/Response.js';
 
 function App() {
+  const handleModeChange = (mode) => {
+    console.log('Mode changed to:', mode);
+  };
   return (
     <div>
       <header>
-          <h2></h2>
+          <h2 className='first'></h2>
           <h2 className="name">Binariers</h2>
           <div className='bar'>        
           <BreadCrumb></BreadCrumb>
@@ -18,7 +21,7 @@ function App() {
           </div>
       </header>
       <div className="switch">
-        <UserSwitch></UserSwitch>
+        <UserSwitch onModeChange={handleModeChange} ></UserSwitch>
       </div>
       <div className="wrapper"> 
       <div className="camera-submit">
@@ -26,11 +29,10 @@ function App() {
         <CameraButton></CameraButton>
       </div>
       </div>
-      <div className="res">
-        <Response></Response>
+      <div className='box-reply'>
+      <Response></Response>
       </div>
-
-    </div>
+      </div>
 
   );
 }
