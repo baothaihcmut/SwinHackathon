@@ -1,3 +1,4 @@
+
 import {  useEffect, useRef } from 'react';
 import Webcam from 'react-webcam';
 import {io} from 'socket.io-client';
@@ -24,6 +25,7 @@ const WebcamCapture = () => {
     };
 
     const startCapture = () => {
+
       const intervalId = setInterval(captureImages, 66);
       return intervalId;
     };
@@ -35,6 +37,7 @@ const WebcamCapture = () => {
 
     return () => clearTimeout(intervalId);
   }, []);
+
 
   return (
     <div>
@@ -48,5 +51,6 @@ const WebcamCapture = () => {
     </div>
   );
 };
+
 
 export default WebcamCapture;

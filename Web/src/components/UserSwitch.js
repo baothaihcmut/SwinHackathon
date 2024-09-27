@@ -1,12 +1,12 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
-  UserSwitchOutlined ,
+  UserSwitchOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UserOutlined ,
+  UserOutlined,
 } from '@ant-design/icons';
 import { Button, Menu } from 'antd';
+
 const items = [
   {
     key: '1',
@@ -19,24 +19,24 @@ const items = [
     label: 'Volunteer',
   },
 ];
-const UserSwitch = () => {
-    const [collapsed, setCollapsed] = useState(false);
-    const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
 
+const UserSwitch = ({ onSelect }) => {
+  const [collapsed, setCollapsed] = useState(false);
+
+  const toggleCollapsed = () => {
+    setCollapsed(!collapsed);
   };
-    return (
-    <div
-      style={{
-        width: 256,
-      }}
-    >
+
+  const handleMenuClick = (e) => {
+    onSelect(e.key);
+  };
+
+  return (
+    <div style={{ width: 256 }}>
       <Button
         type="primary"
         onClick={toggleCollapsed}
-        style={{
-          marginBottom: 16,
-        }}
+        style={{ marginBottom: 16 }}
       >
         {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
       </Button>
@@ -47,9 +47,10 @@ const UserSwitch = () => {
         theme="dark"
         inlineCollapsed={collapsed}
         items={items}
+        onClick={handleMenuClick}
       />
     </div>
-    );
+  );
 };
 
 export default UserSwitch;

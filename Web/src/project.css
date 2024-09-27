@@ -104,23 +104,27 @@ body {
     font-family: 'Poppins', sans-serif;
     color: white;
     font-style: italic;
+    margin-left: 80px;
 }
-.res{
+.res {
     position: absolute;
     display: flex;
     top: 100px;
-    text-align:start;
+    text-align: start;
     align-items: center;
-    width: 400px;
+    width: 640px;
     height: 100px;
-    background:transparent;
-    border: 2px solid #fff;
+    background: transparent;
     outline: none;
     border-radius: 6px;
     font-size: 1.1em;
     color: rgb(178, 238, 59);
     font-weight: 500;
     z-index: 99;
-    background: linear-gradient(40deg,#2c712e14,#a99a1917);
+    background: linear-gradient(40deg, #2c712e14, #a99a1917);
+    visibility: hidden;
+}
+
+.res.visible {
     visibility: visible;
 }
