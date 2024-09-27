@@ -4,7 +4,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const cors = require('cors');
-
+const dotenv = require('dotenv')
 const app = express();
 
 // Middleware
@@ -18,7 +18,7 @@ app.use(session({ secret: 'yourSecretKey', resave: false, saveUninitialized: tru
 // Initialize Passport
 app.use(passport.initialize());
 app.use(passport.session());
-
+dotenv.configDotenv()
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 passport.use(new GoogleStrategy({
