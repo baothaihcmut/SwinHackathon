@@ -66,7 +66,7 @@ def load_model(actions):
     model.add(Dense(32, activation='relu'))
     model.add(Dense(4, activation='softmax'))  # Output layer
 
-    model.load_weights('C:/Users/Owner/Desktop/swin_hackathon/SwinHackathon/API/app/users/action_final.h5')
+    model.load_weights('/Users/thaibao/Hackathon/API/app/users/action_final.h5')
     return model
 
 def run_real_time_detection():
