@@ -7,8 +7,8 @@ from typing import AsyncGenerator
 from .volunteer.model import MetaData
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import  init_beanie
-
-MONGODB_URL = "mongodb://localhost:27017"
+from .volunteer.volunteer import volunteer
+MONGODB_URL = "mongodb+srv://baothai:22042004bao@mycluster.zt1ifni.mongodb.net/?retryWrites=true&w=majority&appName=mycluster"
 DB_NAME = "my_database"
 
 async def init():
@@ -32,6 +32,7 @@ app.add_middleware(
 )
 
 app.include_router(user_router, prefix= '/users')
+app.include_router(volunteer, prefix='/volunteer')
 app.mount('/sockets',app=sio_app)
 
 @app.get('/')
