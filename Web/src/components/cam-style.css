@@ -13,6 +13,10 @@
     transition:.4s;
     z-index: 4;  
     transform: translateX(-50%);
+<<<<<<< HEAD
+=======
+    top:100px
+>>>>>>> origin/main
     
 }
 .camera-layer{
@@ -34,6 +38,10 @@
   }
 .camera-start{
     display: block;
+<<<<<<< HEAD
+=======
+    position: absolute;
+>>>>>>> origin/main
     margin-bottom: 600px; 
     width: 80px;
     height: 40px;
@@ -60,7 +68,11 @@
 }
 
 .blur-background {
+<<<<<<< HEAD
     position: fixed;
+=======
+    position: absolute;
+>>>>>>> origin/main
     top: 0;
     left: 0;
     width: 100%;

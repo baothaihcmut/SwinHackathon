@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './components.css';
 import JumpingText from './JumpingText';
 const Response = () => {
-    const [haveData, setHaveData] = useState(false);
     return (
-        <div className={`res ${haveData ? 'visible' : ''}`}>
-            <JumpingText setHaveData={setHaveData} />
+        <div className='res-pond'>
+            <JumpingText></JumpingText>
         </div>
     );
 };

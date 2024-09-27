@@ -31,7 +31,7 @@ header{
     font-style: italic;
     font-family: 'Georgia', serif;
     color: #fff;
-    width: 200px;
+    padding-left: 170px;
 }
 .logo img{
     width: 30px;
@@ -52,9 +52,6 @@ header{
     color:#fff;
     font-weight: 500;
     transition:.4s;
-}
-.first{
-    width: 200px;
 }
 .buttonPopup:hover {
     background:#FFF;
@@ -82,7 +79,7 @@ body {
     height: 440px;
     background: transparent;
     border: 4px ;
-    /* margin-right: 70px; */
+    margin-right: 70px;
     align-items: center;
     display: flex;
     border: 1px solid white;
@@ -99,7 +96,6 @@ body {
     font-size: smaller;
 }
 .camera-submit{
-    margin-left: 70px;
     position: absolute;
     top :50px;
 }
@@ -109,9 +105,22 @@ body {
     color: white;
     font-style: italic;
 }
-.box-reply{
+.res{
     position: absolute;
-    top : 100px;
+    display: flex;
+    top: 100px;
+    text-align:start;
+    align-items: center;
     width: 400px;
     height: 100px;
+    background:transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    color: rgb(178, 238, 59);
+    font-weight: 500;
+    z-index: 99;
+    background: linear-gradient(40deg,#2c712e14,#a99a1917);
+    visibility: visible;
 }

@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import './components.css';
-;
+import { sockets } from './WebcamCapture';
 
-const JumpingText = ({ setHaveData }) => {
+const JumpingText = () => {
     const [results, setResults] = useState([]);
+    const [haveData, setHaveData] = useState(false);
 
     useEffect(() => {
         sockets.on('donePredict', (data) => {
             if (data) {
                 setResults(prevResults => [...prevResults, data]);
                 setHaveData(true);
+
+                console.log(data)
             }
         });
-    }, [setHaveData]);
+    }, []);
 
     return (
         <div className="text-move">
-            {results.length > 0 && (
+            {haveData && (
                 <div>
                     {results.map((item, index) => (
                         <span key={index}>{item.res}</span>
@@ -24,7 +27,7 @@ const JumpingText = ({ setHaveData }) => {
                 </div>
             )}
         </div>
- 
+
     );
 };
 
