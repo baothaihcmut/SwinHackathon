@@ -3,7 +3,7 @@ import Webcam from 'react-webcam';
 import {io} from 'socket.io-client';
 
 export const sockets = io('localhost:8000', {
-  path: '/sockets',
+  path: '/sockets/webcam',
   extraHeaders: {
     Authorization: 'hello'
   }
