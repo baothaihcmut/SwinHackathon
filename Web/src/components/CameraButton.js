@@ -34,7 +34,9 @@ const CameraButton = () => {
     setShowFinishButton(false);
     setCountdown(4);
     setVisualCountdown(true);
+    window.location.reload();
   };
+
   return (
     <div className='mycamera'>
     {showWebcam && <div className="blur-background"></div>}
