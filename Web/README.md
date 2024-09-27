@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project consists of three main components:
+- A React frontend located in the `Web` directory
+- A Node.js backend with OAuth2 authentication
+- A FastAPI backend located in the `API` directory
 
-In the project directory, you can run:
+## Directory Structure
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Make sure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (version x.x.x)
+- Python (version x.x.x)
+- Pip (Python package installer)
+- Docker (optional, for containerized setup)
 
-### `npm run build`
+### Setting Up the React App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Navigate to the `Web` directory:
+    ```bash
+    cd Web
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install the required dependencies:
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the React app:
+    ```bash
+    npm start
+    ```
 
-### `npm run eject`
+The app will run on `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Setting Up the Node.js App (OAuth2)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Navigate to the `NodeApp` directory:
+    ```bash
+    cd NodeApp
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install the required dependencies:
+    ```bash
+    npm install
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Start the Node.js server:
+    ```bash
+    npm start
+    ```
 
-## Learn More
+The server will run on `http://localhost:5000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Setting Up the FastAPI App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Navigate to the `API` directory:
+    ```bash
+    cd API
+    ```
 
-### Code Splitting
+2. Create a virtual environment (optional but recommended):
+    ```bash
+    python -m venv venv
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Activate the virtual environment:
+    - On Windows:
+        ```bash
+        venv\Scripts\activate
+        ```
+    - On macOS/Linux:
+        ```bash
+        source venv/bin/activate
+        ```
 
-### Analyzing the Bundle Size
+4. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. Start the FastAPI app:
+    ```bash
+    uvicorn main:app --reload
+    ```
 
-### Making a Progressive Web App
+The app will run on `http://localhost:8000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## API Endpoints
 
-### Advanced Configuration
+- **Node.js OAuth2 App**:
+  - Authentication endpoints and resources will be defined here.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **FastAPI App**:
+  - API endpoints can be accessed through `http://localhost:8000/docs` for Swagger UI.
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Feel free to fork this project, create branches for new features, and submit pull requests.
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
